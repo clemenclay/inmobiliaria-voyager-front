@@ -1,0 +1,391 @@
+body {
+  font-family: 'Poppins', sans-serif;
+
+  background: #0277bd;
+}
+
+main {
+  min-height: calc(100vh - 332px);
+  background: #eee;
+  padding: 1px;
+}
+
+img.card-img-top {
+    width: 100%;
+  }
+  
+  img.logo {
+    margin-left: 41px;
+    float: left;
+    margin: 0px;
+    height: 64px;
+    padding: 9px;
+}
+
+.logo-texto{
+  
+  margin: 0;
+  height: 64px;
+  line-height: 64px;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;}
+  
+  section.content {
+    margin-top: 0;
+  }
+  
+  .sidebar .menu {
+    overflow-y: hidden;
+  }
+
+  .navbar-fixed {
+    z-index: 9999;
+    height: 64px;
+}
+
+nav .sidenav-trigger i {
+  height: 64px;
+  line-height: 64px;
+}
+
+  .side-nav {
+    top: 55px;
+  }
+
+  
+  .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img { 
+    width: 100%;
+  }
+  /* 
+  .carousel-inner {
+    position: relative;
+    width: calc(100% + 30px);
+    overflow: hidden;
+    margin-left: -15px;
+    margin-top: -4px;
+  } */
+  
+  section.content.sin-borde {
+    margin: 0;
+    margin-top:-6px;
+  }
+  
+  .theme-indigo .navbar-brand {
+    color: #25aa37;
+    font-weight: bold;
+    margin-left: 0px !important;
+  }
+  
+  .theme-indigo .sidebar .menu .list li {
+    border-bottom: 1px solid #3f51b50d;
+  }
+  
+  .theme-indigo .sidebar .menu .list li.active {
+    background-color: #f8f8f8;
+  }
+  
+  @media (max-width: 767px){
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+      width: 40%;
+  }}
+  
+  button[aria-expanded="false"] i.material-icons {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 300ms ease-in 0s;
+    -moz-transition: all 300ms ease-in 0s;
+    -o-transition: all 300ms ease-in 0s;
+    transition: all 300ms ease-in 0s;
+    /* color: #c5c5c5; */
+  }
+  
+  
+  button[aria-expanded="true"] i.material-icons {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all 300ms ease-in 0s;
+    -moz-transition: all 300ms ease-in 0s;
+    -o-transition: all 300ms ease-in 0s;
+    transition: all 300ms ease-in 0s;
+    /* color: #c5c5c5; */
+  }
+  button#sin-sombra {
+    box-shadow: none !important;
+  }
+
+nav div div a.active, nav div div a:hover {
+  background: #077cdd !important;
+  color: #ffffff !important;
+}
+.botones-centrados {
+    display: inline-flex;
+}
+
+.card .card-title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px !important;
+}
+
+.card .card-content {
+    padding: 15px;
+}
+
+.card .card-reveal {
+    padding: 15px;
+}
+
+
+
+@media (min-width: 767px){  
+    .container {
+        min-height: calc(100% - 300px);
+    }
+}
+
+
+.tabs-cards {
+  position: absolute;
+  background-color: transparent;
+  float: left;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  width: 60px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.tabs-cards li.tab {
+  display: grid;
+  position: absolute;
+  margin: 100px 10px;
+}
+
+@media only screen and (max-width: 992px){.tabs {
+  display: grid !important;
+}}
+
+.tabs .indicator {
+  display: none;
+}
+
+
+.card-mapa-imagen {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 250px;
+  width: 100% !important;
+}
+
+.card .card-image img {
+  height: 250px;
+  width: 100% !important;
+  object-fit: cover;
+}
+
+.carousel .carousel-item>img {height: 250px;
+  width: 100% !important;
+  object-fit: cover;}
+
+  .card-mapa-imagen  div {
+    height: 250px !important;
+}
+
+.btn-floating a {
+  line-height: 40px !important;
+  padding: 0px !important;
+}
+
+.btn-floating {
+  height: 40px !important;}
+
+
+#home-slider.carousel .carousel-item>img {
+    height: 450px;
+    width: 100% !important;
+    object-fit: cover;
+}
+
+
+
+.container {
+  width: calc(100% - 15px)!important;
+  max-width: 90%;
+}
+
+.botonera-home-slider{margin: 200px 15px}
+
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  margin-top: 0;
+  left: calc(50% - 9px);
+}
+
+nav .sidenav-trigger {
+  margin: 0;
+  height: 64px;
+}
+
+nav {
+  height: 64px;
+  line-height: 62px;
+}
+
+.sidenav {
+  top: 64px;
+}
+
+#blur-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #ffffffc2;
+    padding: 11px 36px;
+    z-index: 1;
+    background-position: center -70px;
+    -webkit-filter: blur(10px);
+    filter: blur(18px);
+    border-radius: 12%;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  background: #ffffff3b;
+  padding: 16px 40px;
+  color: #135bac;
+  z-index: 2;
+  border-top: 2px solid #ffffff24;
+  width: 100%;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #1565C0;
+  box-shadow: 0 1px 0 0 #1565C0;
+}
+
+input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+  color: #1565C0;
+}
+
+.modalfullwidth{width: 100% !important;}
+
+.modalfullheigth{
+    max-height: 100%;
+    overflow-y: hidden;
+    z-index: 9999 !important;
+    top: 20px !important;
+  }
+
+.modalfullwidth.material-placeholder img {height: 100% !important;}
+
+.modalfullheigth a.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999999999999999;
+  float: right;
+  padding: 8px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.page-footer {
+  padding-top: 0;
+  float: left;
+  width: 100%;
+}
+
+.mapa-contacto {display: block}
+
+
+
+
+
+
+
+/* Estilos filtros MIXITUP */
+
+
+
+.controls {
+  line-height: 3rem;
+margin-bottom: 10px;
+}
+
+.control:hover {
+  background: #3f3f3f;
+}
+
+.control[data-filter]:after,
+.control[data-toggle]:after {
+  content: '';
+  transition: background-color 150ms, border-color 150ms;
+}
+
+
+.mixitup-control-active
+{
+  background: #1565c0 !important;
+}
+
+
+.mixitup-control-active i.material-icons.blue-text.text-darken-2 {
+  color: white !important;
+}
+
+.mixitup-control-active[data-toggle]:after {
+  background: transparent;
+}
+
+
+
+/* Container
+---------------------------------------------------------------------- */
+
+/* .container {
+  padding: 1rem;
+  text-align: justify;
+  font-size: 0.1px;
+}
+
+.container:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+} */
+
+/* Target Elements
+---------------------------------------------------------------------- */
+
+.mix,
+.gap {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mix {
+     position: relative;
+}
+
+/*  FIN Estilos filtros MIXITUP */

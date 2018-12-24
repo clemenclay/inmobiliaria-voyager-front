@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit95813466f866934e86025d8213e7c12f
+class ComposerStaticInite8cabde6bd5331c2aa1f45a44809f144
 {
     public static $files = array (
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
@@ -100,6 +100,8 @@ class ComposerStaticInit95813466f866934e86025d8213e7c12f
         array (
             'Pvtl\\VoyagerPages\\' => 18,
             'Pvtl\\VoyagerFrontend\\' => 21,
+            'Pvtl\\VoyagerForms\\Database\\' => 27,
+            'Pvtl\\VoyagerForms\\' => 18,
             'Pvtl\\VoyagerBlog\\' => 17,
             'Psy\\' => 4,
             'Psr\\SimpleCache\\' => 16,
@@ -361,6 +363,14 @@ class ComposerStaticInit95813466f866934e86025d8213e7c12f
         'Pvtl\\VoyagerFrontend\\' => 
         array (
             0 => __DIR__ . '/..' . '/pvtl/voyager-frontend/src',
+        ),
+        'Pvtl\\VoyagerForms\\Database\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pvtl/voyager-forms/database',
+        ),
+        'Pvtl\\VoyagerForms\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pvtl/voyager-forms/src',
         ),
         'Pvtl\\VoyagerBlog\\' => 
         array (
@@ -659,7 +669,6 @@ class ComposerStaticInit95813466f866934e86025d8213e7c12f
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'Carbon\\Laravel\\ServiceProvider' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Laravel/ServiceProvider.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
-        'CategoriesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoriesTableSeeder.php',
         'Composer\\Autoload\\AutoloadGenerator' => __DIR__ . '/..' . '/composer/composer/src/Composer/Autoload/AutoloadGenerator.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/composer/src/Composer/Autoload/ClassLoader.php',
         'Composer\\Autoload\\ClassMapGenerator' => __DIR__ . '/..' . '/composer/composer/src/Composer/Autoload/ClassMapGenerator.php',
@@ -3331,6 +3340,7 @@ class ComposerStaticInit95813466f866934e86025d8213e7c12f
         'Monolog\\Utils' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Utils.php',
         'Nexmo\\Account\\Balance' => __DIR__ . '/..' . '/nexmo/client/src/Account/Balance.php',
         'Nexmo\\Account\\Client' => __DIR__ . '/..' . '/nexmo/client/src/Account/Client.php',
+        'Nexmo\\Account\\PrefixPrice' => __DIR__ . '/..' . '/nexmo/client/src/Account/PrefixPrice.php',
         'Nexmo\\Account\\Price' => __DIR__ . '/..' . '/nexmo/client/src/Account/Price.php',
         'Nexmo\\Account\\Secret' => __DIR__ . '/..' . '/nexmo/client/src/Account/Secret.php',
         'Nexmo\\Account\\SecretCollection' => __DIR__ . '/..' . '/nexmo/client/src/Account/SecretCollection.php',
@@ -3841,7 +3851,6 @@ class ComposerStaticInit95813466f866934e86025d8213e7c12f
         'PHP_Token_XOR_EQUAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD_FROM' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
-        'PagesTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PagesTableSeeder.php',
         'Parsedown' => __DIR__ . '/..' . '/erusev/parsedown/Parsedown.php',
         'PermissionRoleTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PermissionRoleTableSeeder.php',
         'PermissionsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PermissionsTableSeeder.php',
@@ -4127,7 +4136,6 @@ class ComposerStaticInit95813466f866934e86025d8213e7c12f
         'PhpParser\\Parser\\Tokens' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Parser/Tokens.php',
         'PhpParser\\PrettyPrinterAbstract' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/PrettyPrinterAbstract.php',
         'PhpParser\\PrettyPrinter\\Standard' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php',
-        'PostsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/PostsTableSeeder.php',
         'Prophecy\\Argument' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument.php',
         'Prophecy\\Argument\\ArgumentsWildcard' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument/ArgumentsWildcard.php',
         'Prophecy\\Argument\\Token\\AnyValueToken' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument/Token/AnyValueToken.php',
@@ -4384,6 +4392,18 @@ class ComposerStaticInit95813466f866934e86025d8213e7c12f
         'Pvtl\\VoyagerBlog\\Commands\\InstallCommand' => __DIR__ . '/..' . '/pvtl/voyager-blog/src/Commands/InstallCommand.php',
         'Pvtl\\VoyagerBlog\\Http\\Controllers\\PostController' => __DIR__ . '/..' . '/pvtl/voyager-blog/src/Http/Controllers/PostController.php',
         'Pvtl\\VoyagerBlog\\Providers\\BlogServiceProvider' => __DIR__ . '/..' . '/pvtl/voyager-blog/src/Providers/BlogServiceProvider.php',
+        'Pvtl\\VoyagerForms\\Commands\\InstallCommand' => __DIR__ . '/..' . '/pvtl/voyager-forms/src/Commands/InstallCommand.php',
+        'Pvtl\\VoyagerForms\\Enquiry' => __DIR__ . '/..' . '/pvtl/voyager-forms/src/Enquiry.php',
+        'Pvtl\\VoyagerForms\\Form' => __DIR__ . '/..' . '/pvtl/voyager-forms/src/Form.php',
+        'Pvtl\\VoyagerForms\\FormInput' => __DIR__ . '/..' . '/pvtl/voyager-forms/src/FormInput.php',
+        'Pvtl\\VoyagerForms\\Forms' => __DIR__ . '/..' . '/pvtl/voyager-forms/src/Forms.php',
+        'Pvtl\\VoyagerForms\\Http\\Controllers\\EnquiryController' => __DIR__ . '/..' . '/pvtl/voyager-forms/src/Http/Controllers/EnquiryController.php',
+        'Pvtl\\VoyagerForms\\Http\\Controllers\\FormController' => __DIR__ . '/..' . '/pvtl/voyager-forms/src/Http/Controllers/FormController.php',
+        'Pvtl\\VoyagerForms\\Http\\Controllers\\InputController' => __DIR__ . '/..' . '/pvtl/voyager-forms/src/Http/Controllers/InputController.php',
+        'Pvtl\\VoyagerForms\\Mail\\Enquiry' => __DIR__ . '/..' . '/pvtl/voyager-forms/src/Mail/Enquiry.php',
+        'Pvtl\\VoyagerForms\\Providers\\VoyagerFormsServiceProvider' => __DIR__ . '/..' . '/pvtl/voyager-forms/src/Providers/VoyagerFormsServiceProvider.php',
+        'Pvtl\\VoyagerForms\\Traits\\DataType' => __DIR__ . '/..' . '/pvtl/voyager-forms/src/Traits/DataType.php',
+        'Pvtl\\VoyagerForms\\Validators\\FormValidators' => __DIR__ . '/..' . '/pvtl/voyager-forms/src/Validators/FormValidators.php',
         'Pvtl\\VoyagerFrontend\\BlogPost' => __DIR__ . '/..' . '/pvtl/voyager-frontend/src/BlogPost.php',
         'Pvtl\\VoyagerFrontend\\Commands\\GenerateSearchIndices' => __DIR__ . '/..' . '/pvtl/voyager-frontend/src/Commands/GenerateSearchIndices.php',
         'Pvtl\\VoyagerFrontend\\Commands\\GenerateSitemap' => __DIR__ . '/..' . '/pvtl/voyager-frontend/src/Commands/GenerateSitemap.php',
@@ -5492,7 +5512,6 @@ class ComposerStaticInit95813466f866934e86025d8213e7c12f
         'Tree\\Visitor\\PreOrderVisitor' => __DIR__ . '/..' . '/nicmart/tree/src/Visitor/PreOrderVisitor.php',
         'Tree\\Visitor\\Visitor' => __DIR__ . '/..' . '/nicmart/tree/src/Visitor/Visitor.php',
         'Tree\\Visitor\\YieldVisitor' => __DIR__ . '/..' . '/nicmart/tree/src/Visitor/YieldVisitor.php',
-        'UsersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/UsersTableSeeder.php',
         'VoyagerDatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/VoyagerDatabaseSeeder.php',
         'VoyagerDummyDatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/VoyagerDummyDatabaseSeeder.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
@@ -5620,11 +5639,11 @@ class ComposerStaticInit95813466f866934e86025d8213e7c12f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit95813466f866934e86025d8213e7c12f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit95813466f866934e86025d8213e7c12f::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit95813466f866934e86025d8213e7c12f::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit95813466f866934e86025d8213e7c12f::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit95813466f866934e86025d8213e7c12f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInite8cabde6bd5331c2aa1f45a44809f144::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInite8cabde6bd5331c2aa1f45a44809f144::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInite8cabde6bd5331c2aa1f45a44809f144::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInite8cabde6bd5331c2aa1f45a44809f144::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInite8cabde6bd5331c2aa1f45a44809f144::$classMap;
 
         }, null, ClassLoader::class);
     }

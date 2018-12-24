@@ -7,7 +7,7 @@ if (class_exists('\Pvtl\VoyagerFrontend\Http\Controllers\PostController')) {
 }
 
 Route::group([
-    'prefix' => 'blog', // Must match its `slug` record in the DB > `data_types`
+    'prefix' => 'propiedades', // Must match its `slug` record in the DB > `data_types`
     'middleware' => ['web'],
     'as' => 'voyager-blog.blog.',
     'namespace' => $namespace,

@@ -12,6 +12,16 @@
     <div class="grid-container">
         <div class="grid-x">
             <div class="cell small-12">
+
+                <?php $images = json_decode($post->image); ?>
+                @if($images != null)
+                    @foreach($images as $image)
+                    <div>
+                        <img src="{{ imageUrl($image) }}" style="width:100%">
+                    </div>
+                    @endforeach
+                @endif
+
                 {!! $post->body !!}
 
                 @if ($relatedPosts)

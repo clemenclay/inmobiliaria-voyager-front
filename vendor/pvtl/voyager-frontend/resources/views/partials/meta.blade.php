@@ -20,9 +20,9 @@
 		<link rel="shortcut icon" href="{{ url('/') }}/images/favicon.ico" />
 		<link rel="apple-touch-icon-precomposed" href="{{ url('/') }}/images/apple-touch-icon.png" />
 
-		<!-- Styles -->
+		<!-- Styles 
 		<link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/app.css">
-
+-->
 		@if (setting('site.google_analytics_tracking_id'))
 				<!-- Google Analytics (gtag.js) -->
 				<script async src="https://www.googletagmanager.com/gtag/js?id={{ setting('site.google_analytics_tracking_id') }}"></script>
@@ -46,6 +46,31 @@
                     document.getElementById(window.formId).submit();
                 }
             </script>
-     @endif
+	 @endif
+	 
+
+<!-- Styles -->
+<link rel="stylesheet" href="{{ url('/') }}/materialize/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url('/') }}/materialize/css/animate.css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<link rel="stylesheet" href="{{ url('/') }}/materialize/css/materialize.min.css">
+<link rel="stylesheet" href="{{ url('/') }}/materialize/css/custom-styles.css">
+<!-- <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}"> -->
+<script src="{{ url('/') }}/materialize/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+
+
+
+
+
 </head>
 <body>

@@ -2218,17 +2218,17 @@
     },
     {
         "name": "laravel/framework",
-        "version": "v5.7.17",
-        "version_normalized": "5.7.17.0",
+        "version": "v5.7.19",
+        "version_normalized": "5.7.19.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laravel/framework.git",
-            "reference": "a15898e2de5f5ae5548a09349c558ef0435d495a"
+            "reference": "5c1d1ec7e8563ea31826fd5eb3f6791acf01160c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laravel/framework/zipball/a15898e2de5f5ae5548a09349c558ef0435d495a",
-            "reference": "a15898e2de5f5ae5548a09349c558ef0435d495a",
+            "url": "https://api.github.com/repos/laravel/framework/zipball/5c1d1ec7e8563ea31826fd5eb3f6791acf01160c",
+            "reference": "5c1d1ec7e8563ea31826fd5eb3f6791acf01160c",
             "shasum": ""
         },
         "require": {
@@ -2330,7 +2330,7 @@
             "symfony/dom-crawler": "Required to use most of the crawler integration testing tools (^4.1).",
             "symfony/psr-http-message-bridge": "Required to psr7 bridging features (^1.0)."
         },
-        "time": "2018-12-12T14:38:09+00:00",
+        "time": "2018-12-18T14:00:38+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -3082,17 +3082,17 @@
     },
     {
         "name": "nexmo/client",
-        "version": "1.5.2",
-        "version_normalized": "1.5.2.0",
+        "version": "1.6.0",
+        "version_normalized": "1.6.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Nexmo/nexmo-php.git",
-            "reference": "f192c84ec3cc3e2657fc754e0da1a17e39ac5542"
+            "reference": "01809cc1e17a5af275913c49bb5d444eb6cc06d4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Nexmo/nexmo-php/zipball/f192c84ec3cc3e2657fc754e0da1a17e39ac5542",
-            "reference": "f192c84ec3cc3e2657fc754e0da1a17e39ac5542",
+            "url": "https://api.github.com/repos/Nexmo/nexmo-php/zipball/01809cc1e17a5af275913c49bb5d444eb6cc06d4",
+            "reference": "01809cc1e17a5af275913c49bb5d444eb6cc06d4",
             "shasum": ""
         },
         "require": {
@@ -3108,7 +3108,7 @@
             "phpunit/phpunit": "^5.7",
             "squizlabs/php_codesniffer": "^3.1"
         },
-        "time": "2018-11-14T14:12:22+00:00",
+        "time": "2018-12-17T10:47:50+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -4578,6 +4578,65 @@
             "frontend",
             "laravel",
             "posts",
+            "voyager"
+        ]
+    },
+    {
+        "name": "pvtl/voyager-forms",
+        "version": "0.3.2",
+        "version_normalized": "0.3.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pvtl/voyager-forms.git",
+            "reference": "28cd5815c509737ab665693cb94ccc9bc92a7c41"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/pvtl/voyager-forms/zipball/28cd5815c509737ab665693cb94ccc9bc92a7c41",
+            "reference": "28cd5815c509737ab665693cb94ccc9bc92a7c41",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "~6.0",
+            "pvtl/voyager-frontend": "~0.8.0",
+            "tcg/voyager": "^1.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^5.7"
+        },
+        "time": "2018-12-17T03:27:23+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Pvtl\\VoyagerForms\\Providers\\VoyagerFormsServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [],
+            "psr-4": {
+                "Pvtl\\VoyagerForms\\": "src/",
+                "Pvtl\\VoyagerForms\\Database\\": "database/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Pivotal Agency",
+                "email": "tech@pivotalagency.com.au",
+                "homepage": "http://pivotalagency.com.au"
+            }
+        ],
+        "description": "Ahoy! - A package to implement forms into Voyager",
+        "keywords": [
+            "Forms",
+            "frontend",
+            "laravel",
             "voyager"
         ]
     },
@@ -7283,8 +7342,8 @@
     },
     {
         "name": "tightenco/collect",
-        "version": "v5.7.17",
-        "version_normalized": "5.7.17.0",
+        "version": "v5.7.18",
+        "version_normalized": "5.7.18.0",
         "source": {
             "type": "git",
             "url": "https://github.com/tightenco/collect.git",

@@ -1,4 +1,4 @@
-<div
+{{-- <div
     class="page-title"
     @if (View::hasSection('page_banner')) style="background-image: url(@yield('page_banner'))" @endif
 >
@@ -8,7 +8,7 @@
             <p>@yield('page_subtitle')</p>
         @endif
     </div> <!-- /.grid-container -->
-</div> <!-- /.page-title -->
+</div> <!-- /.page-title --> 
 
-@include('voyager-frontend::partials.breadcrumbs')
+@include('voyager-frontend::partials.breadcrumbs')--}}
 
