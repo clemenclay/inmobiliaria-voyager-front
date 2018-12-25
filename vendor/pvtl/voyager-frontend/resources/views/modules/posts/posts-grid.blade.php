@@ -12,38 +12,50 @@
                 @foreach($posts as $post)
                 <div class="col s12 m6 l3 mix">
                         <div class="card hoverable">
-                            
-                            <a href="{{ route('voyager-blog.blog.post', ['slug' => $post->slug]) }}">
-                                    <div class="card-image waves-effect waves-block waves-light">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <div class="card-mapa-imagen">
+                                            <ul class="tabs tabs-cards">
+                                                <li id="ver-mapa-" class="tab btn-floating waves-effect waves-light btn white scale-transition">
+                                                    <a class="" href="#mapa-"><i class="material-icons blue-text text-darken-2">place</i></a>
+                                                </li>
+                                                <li id="ver-fotos-" class="tab btn-floating waves-effect waves-light btn white scale-transition scale-out">
+                                                    <a class="active" href="#fotos-"><i class="material-icons blue-text text-darken-2">photo_camera</i></a>
+                                                </li>
+                                            </ul>
 
+                                           
+                                            
+                                    <?php $images = json_decode($post->image); ?>
+                                    @if($images != null)
+                                    <div id="fotos-" class="tabs-content carousel carousel-slider">
+                                        @foreach($images as $image)
 
-                                 <?php $images = json_decode($post->image); ?>
-                                @if($images != null)
-                                    @foreach($images as $image)
-                                    <div id="fotos-{{ $image }}" class="tabs-content carousel carousel-slider">
-                                            <div class="carousel-item">	
-                                                    <div class="carousel carousel-slider">
-                                                        <img src="{{ imageUrl($image) }}" style="width:100%">
-                                                        {{-- <img src="{{ imageUrl($image, 260, 175) }}" style="width:100%"> --}}
-                                                    </div>
-                                            </div>
+                                                <div class="carousel-item">	
+                                                        
+                                                            <img src="{{ imageUrl($image) }}" style="width:100%">
+                                                            {{-- <img src="{{ imageUrl($image, 260, 175) }}" style="width:100%"> --}}
+                                                        
+                                                </div>
+
+                                        @endforeach
                                     </div>
-                                    @endforeach
-                                @endif
+                                    @endif
 
-
-
-
-
+                                    <div id="mapa-" class="tabs-content carousel carousel-slider">
+                                            <div class="carousel-item">
+                                                <iframe width="100%" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q={{ $post->calle }},{{ $post->altura }},{{ $post->localidad }}&zoom=15&key=AIzaSyAOCzRBIJRykPBCzw_F1eggTD4uCxCwVRg" allowfullscreen="false"></iframe>
+                                            </div>	
                                     </div>
+                                </div>
+                            </div>
 
-                            </a>
-                            <div class="card-section">
-                                <span class="label secondary">
+                           
+                            <div class="card-content">
+                                {{-- <span class="label secondary">
                                     {{ $post->created_at->format('M. jS Y') }}
-                                </span>
+                                </span> --}}
                                 <a href="{{ route('voyager-blog.blog.post', ['slug' => $post->slug]) }}">
-                                    <h4>{{ $post->title }}</h4>
+                                        <span class="card-title activator indigo-text">{{ $post->title }}</span>
                                 </a>
                                 @if ($post->excerpt)
                                     <p>{{ str_limit($post->excerpt, 50, '&hellip;') }}</p>
@@ -70,3 +82,56 @@
 
     <div class="vspace-1"></div>
 @endif
+
+
+<script>
+
+    M.AutoInit()
+    
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+        function autoplay() {
+            $('.carousel').carousel('next');
+        
+            
+        }
+        
+    </script>
+    <script>
+	
+	
+	
+		
+            $(document).ready(function() {
+            
+                $("i.material-icons.close").click(function(){
+                      parent.history.back();
+                     return false;					
+                 });
+
+
+
+
+
+                $("#ver-mapa-").click(function(){
+                $("#ver-mapa-").addClass("scale-out");
+                $("#ver-fotos-").removeClass("scale-out");
+               				
+            });
+            
+                $("#ver-fotos-").click(function(){	
+                $("#ver-fotos-").addClass("scale-out");
+                $("#ver-mapa-").removeClass("scale-out");
+               	
+            });
+            
+            
+            });
+            
+
+
+
+
+
+
+
+            </script>
