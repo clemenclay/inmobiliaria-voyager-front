@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS `blog_posts` (
   `tags` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `published_date` timestamp NULL DEFAULT current_timestamp(),
   `moneda_id` int(11) DEFAULT NULL,
+  `precio` double NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `blog_posts_slug_unique` (`slug`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -37,9 +38,9 @@ CREATE TABLE IF NOT EXISTS `blog_posts` (
 -- Volcando datos para la tabla inmob.blog_posts: ~2 rows (aproximadamente)
 DELETE FROM `blog_posts`;
 /*!40000 ALTER TABLE `blog_posts` DISABLE KEYS */;
-INSERT INTO `blog_posts` (`id`, `author_id`, `category_id`, `title`, `seo_title`, `excerpt`, `body`, `image`, `slug`, `meta_description`, `status`, `featured`, `created_at`, `updated_at`, `tags`, `published_date`, `moneda_id`) VALUES
-	(1, 1, 2, 'My First Blog Post', NULL, 'An example blog post', '<p>Matey yardarm topmast broadside nipper weigh anchor jack quarterdeck crow\'s nest rigging. Topgallant lateen sail line avast me gun Pirate Round strike colors bilge rat take a caulk. Jack six pounders spanker doubloon clipper spirits case shot hang the jib boatswain red ensign.</p>\r\n<p>Hornswaggle spanker spyglass Yellow Jack mutiny Arr lugger poop deck keel take a caulk. Quarter fire ship run a shot across the bow sheet log draft scallywag gally port skysail. Lugsail gangway draft pink piracy bilge Buccaneer heave to landlubber or just lubber Pieces of Eight.</p>', '["blog_posts\\\\December2018\\\\gVX2H38jgG7rV9ax1ZlW.png","blog_posts\\\\December2018\\\\FfT8kkLIzMsPE9krx2TZ.png"]', 'my-first-blog-post', 'A test blog post', 'PUBLISHED', 0, '2018-12-19 12:42:56', '2018-12-24 23:30:44', NULL, '2018-12-19 00:00:00', 2),
-	(2, 1, 1, 'My Second Blog Post', NULL, 'An example blog post', '<p>Matey yardarm topmast broadside nipper weigh anchor jack quarterdeck crow\'s nest rigging. Topgallant lateen sail line avast me gun Pirate Round strike colors bilge rat take a caulk. Jack six pounders spanker doubloon clipper spirits case shot hang the jib boatswain red ensign.</p>\r\n<p>Hornswaggle spanker spyglass Yellow Jack mutiny Arr lugger poop deck keel take a caulk. Quarter fire ship run a shot across the bow sheet log draft scallywag gally port skysail. Lugsail gangway draft pink piracy bilge Buccaneer heave to landlubber or just lubber Pieces of Eight.</p>', NULL, 'my-second-blog-post', 'A test blog post', 'PUBLISHED', 0, '2018-12-19 12:42:56', '2018-12-24 23:30:52', NULL, '2018-05-11 00:00:00', 1);
+INSERT INTO `blog_posts` (`id`, `author_id`, `category_id`, `title`, `seo_title`, `excerpt`, `body`, `image`, `slug`, `meta_description`, `status`, `featured`, `created_at`, `updated_at`, `tags`, `published_date`, `moneda_id`, `precio`) VALUES
+	(1, 1, 2, 'My First Blog Post', NULL, 'An example blog post', '<p>Matey yardarm topmast broadside nipper weigh anchor jack quarterdeck crow\'s nest rigging. Topgallant lateen sail line avast me gun Pirate Round strike colors bilge rat take a caulk. Jack six pounders spanker doubloon clipper spirits case shot hang the jib boatswain red ensign.</p>\r\n<p>Hornswaggle spanker spyglass Yellow Jack mutiny Arr lugger poop deck keel take a caulk. Quarter fire ship run a shot across the bow sheet log draft scallywag gally port skysail. Lugsail gangway draft pink piracy bilge Buccaneer heave to landlubber or just lubber Pieces of Eight.</p>', '["blog_posts\\\\December2018\\\\gVX2H38jgG7rV9ax1ZlW.png","blog_posts\\\\December2018\\\\FfT8kkLIzMsPE9krx2TZ.png"]', 'my-first-blog-post', 'A test blog post', 'PUBLISHED', 0, '2018-12-19 12:42:56', '2018-12-25 21:32:23', NULL, '2018-12-19 00:00:00', 2, 120000000),
+	(2, 1, 1, 'My Second Blog Post', NULL, 'An example blog post', '<p>Matey yardarm topmast broadside nipper weigh anchor jack quarterdeck crow\'s nest rigging. Topgallant lateen sail line avast me gun Pirate Round strike colors bilge rat take a caulk. Jack six pounders spanker doubloon clipper spirits case shot hang the jib boatswain red ensign.</p>\r\n<p>Hornswaggle spanker spyglass Yellow Jack mutiny Arr lugger poop deck keel take a caulk. Quarter fire ship run a shot across the bow sheet log draft scallywag gally port skysail. Lugsail gangway draft pink piracy bilge Buccaneer heave to landlubber or just lubber Pieces of Eight.</p>', NULL, 'my-second-blog-post', 'A test blog post', 'PUBLISHED', 0, '2018-12-19 12:42:56', '2018-12-26 00:01:00', NULL, '2018-05-11 00:00:00', 1, 15000);
 /*!40000 ALTER TABLE `blog_posts` ENABLE KEYS */;
 
 -- Volcando estructura para tabla inmob.categories
@@ -83,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `data_rows` (
   PRIMARY KEY (`id`),
   KEY `data_rows_data_type_id_foreign` (`data_type_id`),
   CONSTRAINT `data_rows_data_type_id_foreign` FOREIGN KEY (`data_type_id`) REFERENCES `data_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=93 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Volcando datos para la tabla inmob.data_rows: ~92 rows (aproximadamente)
 DELETE FROM `data_rows`;
@@ -180,7 +181,8 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 	(89, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
 	(90, 10, 'propiedad_belongsto_moneda_relationship', 'relationship', 'monedas', 0, 1, 1, 1, 1, 1, '{"model":"App\\\\Moneda","table":"monedas","type":"belongsTo","column":"moneda_id","key":"id","label":"simbolo","pivot_table":"blog_posts","pivot":"0","taggable":"0"}', 8),
 	(91, 4, 'blog_post_belongsto_moneda_relationship', 'relationship', 'monedas', 0, 1, 1, 1, 1, 1, '{"model":"App\\\\Moneda","table":"monedas","type":"belongsTo","column":"moneda_id","key":"id","label":"simbolo","pivot_table":"blog_posts","pivot":"0","taggable":"0"}', 18),
-	(92, 4, 'moneda_id', 'text', 'Moneda Id', 0, 1, 1, 1, 1, 1, '{}', 17);
+	(92, 4, 'moneda_id', 'text', 'Moneda Id', 0, 1, 1, 1, 1, 1, '{}', 17),
+	(93, 4, 'precio', 'number', 'Precio', 1, 1, 1, 1, 1, 1, '{}', 18);
 /*!40000 ALTER TABLE `data_rows` ENABLE KEYS */;
 
 -- Volcando estructura para tabla inmob.data_types
@@ -212,7 +214,7 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 	(1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', '', '', 1, 0, NULL, '2018-12-19 12:37:04', '2018-12-19 12:37:04'),
 	(2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2018-12-19 12:37:04', '2018-12-19 12:37:04'),
 	(3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, '', '', 1, 0, NULL, '2018-12-19 12:37:04', '2018-12-19 12:37:04'),
-	(4, 'blog_posts', 'blog_posts', 'Blog Post', 'Blog Posts', 'voyager-news', 'Pvtl\\VoyagerFrontend\\BlogPost', NULL, '\\Pvtl\\VoyagerFrontend\\Http\\Controllers\\PostController', NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-19 12:42:53', '2018-12-24 23:30:30'),
+	(4, 'blog_posts', 'blog_posts', 'Blog Post', 'Blog Posts', 'voyager-news', 'Pvtl\\VoyagerFrontend\\BlogPost', NULL, '\\Pvtl\\VoyagerFrontend\\Http\\Controllers\\PostController', NULL, 1, 0, '{"order_column":null,"order_display_column":null}', '2018-12-19 12:42:53', '2018-12-25 21:31:21'),
 	(5, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'Pvtl\\VoyagerBlog\\Category', NULL, '\\TCG\\Voyager\\Http\\Controllers\\VoyagerBaseController', '', 1, 0, NULL, '2018-12-19 12:42:56', '2018-12-19 12:42:56'),
 	(6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'Pvtl\\VoyagerFrontend\\Page', NULL, '\\Pvtl\\VoyagerFrontend\\Http\\Controllers\\PageController', '', 1, 0, NULL, '2018-12-19 12:43:01', '2018-12-19 12:43:03'),
 	(7, 'forms', 'forms', 'Form', 'Forms', 'voyager-documentation', 'Pvtl\\VoyagerForms\\Form', NULL, '\\Pvtl\\VoyagerForms\\Http\\Controllers\\FormController', NULL, 1, 0, NULL, '2018-12-19 16:53:17', '2018-12-19 16:53:17'),

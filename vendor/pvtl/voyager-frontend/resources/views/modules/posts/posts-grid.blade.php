@@ -56,6 +56,10 @@
                                 </span> --}}
                                 <a href="{{ route('voyager-blog.blog.post', ['slug' => $post->slug]) }}">
                                         <span class="card-title activator indigo-text">{{ $post->title }}</span>
+                                        <span class="card-title activator indigo-text">
+                                                {{ number_format($post->precio, 0, ".", ".") }}
+                                        </span>
+                                        <span class="card-title activator indigo-text">{{ $post->moneda_id }}</span>
                                 </a>
                                 @if ($post->excerpt)
                                     <p>{{ str_limit($post->excerpt, 50, '&hellip;') }}</p>
