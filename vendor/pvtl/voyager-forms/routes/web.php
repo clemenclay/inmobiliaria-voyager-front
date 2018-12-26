@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Admin Route/s
+ */
+Route::group([
+    'as' => 'voyager.forms.',
+    'prefix' => 'admin/forms/',
+    'middleware' => ['web', 'admin.user'],
+    'namespace' => '\Pvtl\VoyagerForms\Http\Controllers'
+], function () {
+    Route::post('sort', ['uses' => "InputController@sort", 'as' => 'sort']);
+});
+
+/**
+ * Front-end Route/s
+ */
+Route::group([
+    'as' => 'voyager.enquiries.',
+    'middleware' => ['web'],
+    'namespace' => '\Pvtl\VoyagerForms\Http\Controllers'
+], function () {
+    Route::post('voyager-forms-submit-enquiry/{id}', ['uses' => "EnquiryController@submit", 'as' => 'submit']);
+});

@@ -17,7 +17,7 @@ class PostController extends \Pvtl\VoyagerBlog\Http\Controllers\PostController
     public function recentBlogPosts($numPosts = 4)
     {
         $posts = BlogPost::where([
-            ['status', '=', 'PUBLISHEDs'],
+            ['status', '=', 'PUBLISHED'],
         ])->whereDate('published_date', '<=', Carbon::now())
             ->limit($numPosts)
             ->orderBy('created_at', 'desc')
@@ -37,7 +37,7 @@ class PostController extends \Pvtl\VoyagerBlog\Http\Controllers\PostController
     {
         $posts = BlogPost::where([
             ['featured', '=', '1'],
-            ['status', '=', 'PUBLISHEDs'],
+            ['status', '=', 'PUBLISHED'],
         ])->whereDate('published_date', '<=', Carbon::now())
             ->limit($numPosts)
             ->orderBy('created_at', 'desc')
